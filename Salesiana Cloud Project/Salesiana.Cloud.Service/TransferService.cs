@@ -15,14 +15,13 @@ namespace Salesiana.Cloud.Service
             RemoteFileInfo result = new RemoteFileInfo();
             try
             {
-                string filePath = System.IO.Path.Combine(@"c:\Uploadfiles", request.FileName);
+                string filePath = System.IO.Path.Combine(@"c:\SalesianaCloud\", request.FileName);
                 System.IO.FileInfo fileInfo = new System.IO.FileInfo(filePath);
 
                 // check if exists
                 if (!fileInfo.Exists)
                     throw new System.IO.FileNotFoundException("File not found",
                                                               request.FileName);
-
                 // open stream
                 System.IO.FileStream stream = new System.IO.FileStream(filePath,
                           System.IO.FileMode.Open, System.IO.FileAccess.Read);
@@ -44,10 +43,8 @@ namespace Salesiana.Cloud.Service
             FileStream targetStream = null;
             Stream sourceStream = request.FileByteStream;
 
-            string uploadFolder = @"C:\upload\";
-
+            string uploadFolder = @"c:\SalesianaCloud\";
             string filePath = Path.Combine(uploadFolder, request.FileName);
-
             using (targetStream = new FileStream(filePath, FileMode.Create,
                                   FileAccess.Write, FileShare.None))
             {

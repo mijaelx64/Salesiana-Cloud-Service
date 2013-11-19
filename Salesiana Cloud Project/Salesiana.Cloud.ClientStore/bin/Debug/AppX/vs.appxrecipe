@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MICHELLE</Machine>
+    <WindowsUser>Mijael</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>99D8FF97EBCBCC32FBC21CF95FEC22F5242AEC1852440E090A2A4967CEA0A22A</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>4cd71076-3e1c-4839-aa7f-048fcfb06e3b_1.0.0.0_neutral__yps17xarsp2at</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>4cd71076-3e1c-4839-aa7f-048fcfb06e3b_yps17xarsp2at!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>4cd71076-3e1c-4839-aa7f-048fcfb06e3b</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=test</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Mijael\Documents\GitHub\Salesiana-Cloud-Service\Salesiana Cloud Project\Salesiana.Cloud.ClientStore\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-11-19T10:41:56.866</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Mijael\Documents\GitHub\Salesiana-Cloud-Service\Salesiana Cloud Project\Salesiana.Cloud.ClientStore\bin\Debug\Salesiana.Cloud.ClientStore.exe">
+      <PackagePath>Salesiana.Cloud.ClientStore.exe</PackagePath>
+      <Modified>2013-11-19T10:55:23.184</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mijael\Documents\GitHub\Salesiana-Cloud-Service\Salesiana Cloud Project\Salesiana.Cloud.ClientStore\bin\Debug\Salesiana.Cloud.ClientStore.pdb">
+      <PackagePath>Salesiana.Cloud.ClientStore.pdb</PackagePath>
+      <Modified>2013-11-19T10:55:23.166</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mijael\Documents\GitHub\Salesiana-Cloud-Service\Salesiana Cloud Project\Salesiana.Cloud.ClientStore\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T00:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mijael\Documents\GitHub\Salesiana-Cloud-Service\Salesiana Cloud Project\Salesiana.Cloud.ClientStore\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T00:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mijael\Documents\GitHub\Salesiana-Cloud-Service\Salesiana Cloud Project\Salesiana.Cloud.ClientStore\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T00:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mijael\Documents\GitHub\Salesiana-Cloud-Service\Salesiana Cloud Project\Salesiana.Cloud.ClientStore\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T00:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mijael\Documents\GitHub\Salesiana-Cloud-Service\Salesiana Cloud Project\Salesiana.Cloud.ClientStore\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+      <Modified>2013-11-19T10:14:31.429</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mijael\Documents\GitHub\Salesiana-Cloud-Service\Salesiana Cloud Project\Salesiana.Cloud.ClientStore\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2013-11-19T10:39:31.210</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mijael\Documents\GitHub\Salesiana-Cloud-Service\Salesiana Cloud Project\Salesiana.Cloud.ClientStore\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2012-06-26T20:19:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mijael\Documents\GitHub\Salesiana-Cloud-Service\Salesiana Cloud Project\Salesiana.Cloud.ClientStore\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+      <Modified>2013-11-19T10:55:02.092</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Mijael\Documents\GitHub\Salesiana-Cloud-Service\Salesiana Cloud Project\Salesiana.Cloud.ClientStore\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2013-11-19T10:41:56.852</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

@@ -8,26 +8,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Salesiana.Cloud.Client.Salesiana_Cloud_Service {
+namespace Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="Salesiana_Cloud_Service.ITransferService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SalesianaCloudTransferService.ITransferService")]
     public interface ITransferService {
         
         // CODEGEN: Generating message contract since the wrapper name (DownloadRequest) of message DownloadRequest does not match the default value (DownloadFile)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransferService/DownloadFile", ReplyAction="http://tempuri.org/ITransferService/DownloadFileResponse")]
-        Salesiana.Cloud.Client.Salesiana_Cloud_Service.RemoteFileInfo DownloadFile(Salesiana.Cloud.Client.Salesiana_Cloud_Service.DownloadRequest request);
+        Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.RemoteFileInfo DownloadFile(Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.DownloadRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransferService/DownloadFile", ReplyAction="http://tempuri.org/ITransferService/DownloadFileResponse")]
-        System.Threading.Tasks.Task<Salesiana.Cloud.Client.Salesiana_Cloud_Service.RemoteFileInfo> DownloadFileAsync(Salesiana.Cloud.Client.Salesiana_Cloud_Service.DownloadRequest request);
+        System.Threading.Tasks.Task<Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.RemoteFileInfo> DownloadFileAsync(Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.DownloadRequest request);
         
         // CODEGEN: Generating message contract since the operation UploadFile is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransferService/UploadFile", ReplyAction="http://tempuri.org/ITransferService/UploadFileResponse")]
-        Salesiana.Cloud.Client.Salesiana_Cloud_Service.UploadFileResponse UploadFile(Salesiana.Cloud.Client.Salesiana_Cloud_Service.RemoteFileInfo request);
+        Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.UploadFileResponse UploadFile(Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.RemoteFileInfo request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransferService/UploadFile", ReplyAction="http://tempuri.org/ITransferService/UploadFileResponse")]
-        System.Threading.Tasks.Task<Salesiana.Cloud.Client.Salesiana_Cloud_Service.UploadFileResponse> UploadFileAsync(Salesiana.Cloud.Client.Salesiana_Cloud_Service.RemoteFileInfo request);
+        System.Threading.Tasks.Task<Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.UploadFileResponse> UploadFileAsync(Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.RemoteFileInfo request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -83,12 +83,12 @@ namespace Salesiana.Cloud.Client.Salesiana_Cloud_Service {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ITransferServiceChannel : Salesiana.Cloud.Client.Salesiana_Cloud_Service.ITransferService, System.ServiceModel.IClientChannel {
+    public interface ITransferServiceChannel : Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.ITransferService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class TransferServiceClient : System.ServiceModel.ClientBase<Salesiana.Cloud.Client.Salesiana_Cloud_Service.ITransferService>, Salesiana.Cloud.Client.Salesiana_Cloud_Service.ITransferService {
+    public partial class TransferServiceClient : System.ServiceModel.ClientBase<Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.ITransferService>, Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.ITransferService {
         
         public TransferServiceClient() {
         }
@@ -110,54 +110,54 @@ namespace Salesiana.Cloud.Client.Salesiana_Cloud_Service {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Salesiana.Cloud.Client.Salesiana_Cloud_Service.RemoteFileInfo Salesiana.Cloud.Client.Salesiana_Cloud_Service.ITransferService.DownloadFile(Salesiana.Cloud.Client.Salesiana_Cloud_Service.DownloadRequest request) {
+        Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.RemoteFileInfo Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.ITransferService.DownloadFile(Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.DownloadRequest request) {
             return base.Channel.DownloadFile(request);
         }
         
         public long DownloadFile(ref string FileName, out System.IO.Stream FileByteStream) {
-            Salesiana.Cloud.Client.Salesiana_Cloud_Service.DownloadRequest inValue = new Salesiana.Cloud.Client.Salesiana_Cloud_Service.DownloadRequest();
+            Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.DownloadRequest inValue = new Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.DownloadRequest();
             inValue.FileName = FileName;
-            Salesiana.Cloud.Client.Salesiana_Cloud_Service.RemoteFileInfo retVal = ((Salesiana.Cloud.Client.Salesiana_Cloud_Service.ITransferService)(this)).DownloadFile(inValue);
+            Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.RemoteFileInfo retVal = ((Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.ITransferService)(this)).DownloadFile(inValue);
             FileName = retVal.FileName;
             FileByteStream = retVal.FileByteStream;
             return retVal.Length;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Salesiana.Cloud.Client.Salesiana_Cloud_Service.RemoteFileInfo> Salesiana.Cloud.Client.Salesiana_Cloud_Service.ITransferService.DownloadFileAsync(Salesiana.Cloud.Client.Salesiana_Cloud_Service.DownloadRequest request) {
+        System.Threading.Tasks.Task<Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.RemoteFileInfo> Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.ITransferService.DownloadFileAsync(Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.DownloadRequest request) {
             return base.Channel.DownloadFileAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Salesiana.Cloud.Client.Salesiana_Cloud_Service.RemoteFileInfo> DownloadFileAsync(string FileName) {
-            Salesiana.Cloud.Client.Salesiana_Cloud_Service.DownloadRequest inValue = new Salesiana.Cloud.Client.Salesiana_Cloud_Service.DownloadRequest();
+        public System.Threading.Tasks.Task<Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.RemoteFileInfo> DownloadFileAsync(string FileName) {
+            Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.DownloadRequest inValue = new Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.DownloadRequest();
             inValue.FileName = FileName;
-            return ((Salesiana.Cloud.Client.Salesiana_Cloud_Service.ITransferService)(this)).DownloadFileAsync(inValue);
+            return ((Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.ITransferService)(this)).DownloadFileAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Salesiana.Cloud.Client.Salesiana_Cloud_Service.UploadFileResponse Salesiana.Cloud.Client.Salesiana_Cloud_Service.ITransferService.UploadFile(Salesiana.Cloud.Client.Salesiana_Cloud_Service.RemoteFileInfo request) {
+        Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.UploadFileResponse Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.ITransferService.UploadFile(Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.RemoteFileInfo request) {
             return base.Channel.UploadFile(request);
         }
         
         public void UploadFile(string FileName, long Length, System.IO.Stream FileByteStream) {
-            Salesiana.Cloud.Client.Salesiana_Cloud_Service.RemoteFileInfo inValue = new Salesiana.Cloud.Client.Salesiana_Cloud_Service.RemoteFileInfo();
+            Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.RemoteFileInfo inValue = new Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.RemoteFileInfo();
             inValue.FileName = FileName;
             inValue.Length = Length;
             inValue.FileByteStream = FileByteStream;
-            Salesiana.Cloud.Client.Salesiana_Cloud_Service.UploadFileResponse retVal = ((Salesiana.Cloud.Client.Salesiana_Cloud_Service.ITransferService)(this)).UploadFile(inValue);
+            Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.UploadFileResponse retVal = ((Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.ITransferService)(this)).UploadFile(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Salesiana.Cloud.Client.Salesiana_Cloud_Service.UploadFileResponse> Salesiana.Cloud.Client.Salesiana_Cloud_Service.ITransferService.UploadFileAsync(Salesiana.Cloud.Client.Salesiana_Cloud_Service.RemoteFileInfo request) {
+        System.Threading.Tasks.Task<Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.UploadFileResponse> Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.ITransferService.UploadFileAsync(Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.RemoteFileInfo request) {
             return base.Channel.UploadFileAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Salesiana.Cloud.Client.Salesiana_Cloud_Service.UploadFileResponse> UploadFileAsync(string FileName, long Length, System.IO.Stream FileByteStream) {
-            Salesiana.Cloud.Client.Salesiana_Cloud_Service.RemoteFileInfo inValue = new Salesiana.Cloud.Client.Salesiana_Cloud_Service.RemoteFileInfo();
+        public System.Threading.Tasks.Task<Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.UploadFileResponse> UploadFileAsync(string FileName, long Length, System.IO.Stream FileByteStream) {
+            Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.RemoteFileInfo inValue = new Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.RemoteFileInfo();
             inValue.FileName = FileName;
             inValue.Length = Length;
             inValue.FileByteStream = FileByteStream;
-            return ((Salesiana.Cloud.Client.Salesiana_Cloud_Service.ITransferService)(this)).UploadFileAsync(inValue);
+            return ((Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.ITransferService)(this)).UploadFileAsync(inValue);
         }
     }
 }

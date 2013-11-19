@@ -3,6 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <TextBox x:Name="uploadPathTextBox" HorizontalAlignment="Left" Height="23" Margin="152,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232"/>
+        <Button x:Name="openFileDialog" Content="..." HorizontalAlignment="Left" Margin="384,114,0,0" VerticalAlignment="Top" Width="19" Click="Button_Click_1" Height="23"/>
+        <Label Content="Inserte Archivo :" HorizontalAlignment="Left" Margin="47,114,0,0" VerticalAlignment="Top" Width="100" Height="23"/>
+        <Button x:Name="uploadButton" Content="Upload" HorizontalAlignment="Left" Margin="226,142,0,0" VerticalAlignment="Top" Width="75" Click="uploadButton_Click"/>
+
     </Grid>
 </Window>

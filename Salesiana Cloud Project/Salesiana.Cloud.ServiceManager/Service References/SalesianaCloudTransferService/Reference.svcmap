@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="96fdd5be-2b43-4ff4-bd2a-642f4f6995a8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bf8a053e-5599-456b-9d31-c002bff5faf1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:8000/Salesiana.Cloud.TransferService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="6b4d6d29-55f1-4143-986f-4875d58855f9" SourceId="1" SourceUrl="http://localhost:8000/Salesiana.Cloud.TransferService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="b7a3fad6-d75a-45f5-948b-9ef0ba11e658" SourceId="1" SourceUrl="http://localhost:8000/Salesiana.Cloud.TransferService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="bd12da7b-16e1-4147-a615-d16f461e4fbe" SourceId="1" SourceUrl="http://localhost:8000/Salesiana.Cloud.TransferService/mex" />
-    <MetadataFile FileName="Message.xsd" MetadataType="Schema" ID="9b69e3a6-a58b-4ff9-bf54-64e948470927" SourceId="1" SourceUrl="http://localhost:8000/Salesiana.Cloud.TransferService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="b9dcd677-42cb-49d0-bc93-1d95aa0ac69f" SourceId="1" SourceUrl="http://localhost:8000/Salesiana.Cloud.TransferService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="14202366-d2e4-4448-9702-f0bce3277a00" SourceId="1" SourceUrl="http://localhost:8000/Salesiana.Cloud.TransferService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="8b7e226c-23db-49e7-b4a9-e099fe65d75b" SourceId="1" SourceUrl="http://localhost:8000/Salesiana.Cloud.TransferService/mex" />
+    <MetadataFile FileName="Message.xsd" MetadataType="Schema" ID="993f6390-cc79-42b2-90dd-586499401c6b" SourceId="1" SourceUrl="http://localhost:8000/Salesiana.Cloud.TransferService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

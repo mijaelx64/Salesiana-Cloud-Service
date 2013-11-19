@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Salesiana.Cloud.Client.Salesiana_Cloud_Service;
-using System.IO;
+using Salesiana.Cloud.ServiceManager.TransferServiceModel;
+//using System.IO;
 
 namespace Salesiana.Cloud.Client
 {
@@ -12,6 +12,7 @@ namespace Salesiana.Cloud.Client
     {
         static void Main(string[] args)
         {
+            /*
             ITransferService transfer = new TransferServiceClient();
             RemoteFileInfo result = new RemoteFileInfo();
             string fileName = "En Mi Lado Del Sofa Videoclip La Oreja de Van Gogh. By elixir.avi";
@@ -70,7 +71,19 @@ namespace Salesiana.Cloud.Client
                 }
                 targetStream.Close();
                 sourceStream.Close();
+            } */
+
+            FileTransfer test = new FileTransfer();
+            try
+            {
+                test.DownloadFile(@"f:\SalesianaDrive Down", "En Mi Lado Del Sofa Videoclip La Oreja de Van Gogh. By elixir.avi");
+                Console.Write("Success");
             }
+            catch (Exception e)
+            {
+               Console.Write("Error" + e.Message);
+            }
+            Console.ReadLine();
             
         }
     }

@@ -93,6 +93,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Salesiana.Cloud.Common\Salesiana.Cloud.Common.csproj">
+      <Project>{41216f59-11d0-42ee-9f61-77ff78fb7f1e}</Project>
+      <Name>Salesiana.Cloud.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Salesiana.Cloud.ServiceManager\Salesiana.Cloud.ServiceManager.csproj">
+      <Project>{657e9160-93c4-4eef-b214-f1d27a17b863}</Project>
+      <Name>Salesiana.Cloud.ServiceManager</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -28,6 +28,12 @@ namespace Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransferService/UploadFile", ReplyAction="http://tempuri.org/ITransferService/UploadFileResponse")]
         System.Threading.Tasks.Task<Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.UploadFileResponse> UploadFileAsync(Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.RemoteFileInfo request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransferService/FolderInformation", ReplyAction="http://tempuri.org/ITransferService/FolderInformationResponse")]
+        System.IO.DirectoryInfo FolderInformation();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransferService/FolderInformation", ReplyAction="http://tempuri.org/ITransferService/FolderInformationResponse")]
+        System.Threading.Tasks.Task<System.IO.DirectoryInfo> FolderInformationAsync();
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -158,6 +164,14 @@ namespace Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService {
             inValue.Length = Length;
             inValue.FileByteStream = FileByteStream;
             return ((Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.ITransferService)(this)).UploadFileAsync(inValue);
+        }
+        
+        public System.IO.DirectoryInfo FolderInformation() {
+            return base.Channel.FolderInformation();
+        }
+        
+        public System.Threading.Tasks.Task<System.IO.DirectoryInfo> FolderInformationAsync() {
+            return base.Channel.FolderInformationAsync();
         }
     }
 }

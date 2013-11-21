@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,5 +20,7 @@ namespace Salesiana.Cloud.Common.Model
         /// </summary>
         /// <param name="path"></param>
         void DownloadFile(string path, string fileName);
+
+        DirectoryInfo CloudInformation();
     }
 }

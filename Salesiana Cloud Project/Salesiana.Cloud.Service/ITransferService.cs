@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -14,9 +15,13 @@ namespace Salesiana.Cloud.Service
         RemoteFileInfo DownloadFile(DownloadRequest request);
 
         [OperationContract]
-        void UploadFile(RemoteFileInfo request); 
+        void UploadFile(RemoteFileInfo request);
+
+        [OperationContract]
+        DirectoryInfo FolderInformation();
     }
 
+    
     [MessageContract]
     public class DownloadRequest
     {

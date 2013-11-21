@@ -11,9 +11,15 @@ namespace Salesiana.Cloud.ServiceManager.TransferServiceModel
 {
     public class FileTransfer : ITransferFile
     {
+        public FileTransfer()
+        {
+            TransferService = new TransferServiceClient();
+        }
+
+        public ITransferService TransferService { get; set; }
+
         public void UploadFile(string path, string fileName)
         {
-            ITransferService TransferService = new Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.TransferServiceClient();
 
             RemoteFileInfo result = new RemoteFileInfo();
             try
@@ -45,8 +51,6 @@ namespace Salesiana.Cloud.ServiceManager.TransferServiceModel
 
         public void DownloadFile(string path, string fileName)
         {
-            ITransferService TransferService = new TransferServiceClient();
-
             DownloadRequest fileRequest = new DownloadRequest(fileName);
             RemoteFileInfo remoteFile = TransferService.DownloadFile(fileRequest);
 
@@ -70,6 +74,12 @@ namespace Salesiana.Cloud.ServiceManager.TransferServiceModel
                 targetStream.Close();
                 sourceStream.Close();
             }
+        }
+
+
+        public DirectoryInfo CloudInformation()
+        {
+            return TransferService.FolderInformation();
         }
     }
 }

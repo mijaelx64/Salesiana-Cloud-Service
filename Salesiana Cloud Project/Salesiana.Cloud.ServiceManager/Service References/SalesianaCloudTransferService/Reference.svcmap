@@ -26,6 +26,7 @@
     <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="14202366-d2e4-4448-9702-f0bce3277a00" SourceId="1" SourceUrl="http://localhost:8000/Salesiana.Cloud.TransferService/mex" />
     <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="8b7e226c-23db-49e7-b4a9-e099fe65d75b" SourceId="1" SourceUrl="http://localhost:8000/Salesiana.Cloud.TransferService/mex" />
     <MetadataFile FileName="Message.xsd" MetadataType="Schema" ID="993f6390-cc79-42b2-90dd-586499401c6b" SourceId="1" SourceUrl="http://localhost:8000/Salesiana.Cloud.TransferService/mex" />
+    <MetadataFile FileName="System.IO.xsd" MetadataType="Schema" ID="bb01ae60-8f41-4ac3-9ff5-989849959c2e" SourceId="1" SourceUrl="http://localhost:8000/Salesiana.Cloud.TransferService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

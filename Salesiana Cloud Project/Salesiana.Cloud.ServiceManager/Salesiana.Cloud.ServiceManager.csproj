@@ -53,7 +53,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\SalesianaCloudTransferService\Message.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -68,6 +70,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\SalesianaCloudTransferService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesianaCloudTransferService\System.IO.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

@@ -62,5 +62,11 @@ namespace Salesiana.Cloud.Service
                 sourceStream.Close();
             }
         }
+
+
+        public DirectoryInfo FolderInformation()
+        {
+            return new DirectoryInfo(@"c:\SalesianaCloud\");
+        }
     }
 }

@@ -47,7 +47,7 @@ namespace Salesiana.Cloud.ClientUI
             fileList.ItemsSource = files;
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void uploadButton_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
             dlg.FileName = ""; // Default file name
@@ -68,15 +68,6 @@ namespace Salesiana.Cloud.ClientUI
             }
             RefreshContent();
             
-        }
-
-        private void uploadButton_Click(object sender, RoutedEventArgs e)
-        {
-           
-            
-            //FileTransfer file = new FileTransfer();
-            //System.IO.FileInfo fileInfo = new System.IO.FileInfo(this.uploadPathTextBox.Text);
-            //file.UploadFile(fileInfo.DirectoryName,fileInfo.Name);
         }
 
         private void downloadButton_Click(object sender, RoutedEventArgs e)

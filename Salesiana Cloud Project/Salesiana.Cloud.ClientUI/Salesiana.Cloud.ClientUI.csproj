@@ -33,6 +33,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>OneDriveIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -104,6 +111,15 @@
       <Project>{657e9160-93c4-4eef-b214-f1d27a17b863}</Project>
       <Name>Salesiana.Cloud.ServiceManager</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="OneDriveIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\9-av-download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\9_av_upload.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

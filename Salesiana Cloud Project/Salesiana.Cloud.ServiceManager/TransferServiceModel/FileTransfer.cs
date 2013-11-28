@@ -51,15 +51,15 @@ namespace Salesiana.Cloud.ServiceManager.TransferServiceModel
             }
         }
 
-        public void DownloadFile(string path, string fileName)
+        public void DownloadFile(string path, string fileNameRequest, string fileNameToSave)
         {
-            DownloadRequest fileRequest = new DownloadRequest(fileName);
+            DownloadRequest fileRequest = new DownloadRequest(fileNameRequest);
             RemoteFileInfo remoteFile = TransferService.DownloadFile(fileRequest);
 
             FileStream targetStream = null;
             Stream sourceStream = remoteFile.FileByteStream;
 
-            string filePath = Path.Combine(path, remoteFile.FileName);
+            string filePath = Path.Combine(path, fileNameToSave);
             using (targetStream = new FileStream(filePath, FileMode.Create,
                                   FileAccess.Write, FileShare.None))
             {

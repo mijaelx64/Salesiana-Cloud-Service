@@ -19,7 +19,7 @@ namespace Salesiana.Cloud.Common.Model
         /// Download a file in the next path
         /// </summary>
         /// <param name="path"></param>
-        void DownloadFile(string path, string fileName);
+        void DownloadFile(string path, string fileNameRequest, string fileNameToSave);
 
         List<FileData> CloudFiles();
     }

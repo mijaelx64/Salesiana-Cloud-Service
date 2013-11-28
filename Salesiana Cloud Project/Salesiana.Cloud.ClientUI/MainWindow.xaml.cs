@@ -43,37 +43,45 @@ namespace Salesiana.Cloud.ClientUI
 
         private void uploadButton_Click(object sender, RoutedEventArgs e)
         {
-            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-            dlg.FileName = ""; // Default file name
-            dlg.DefaultExt = ".*"; // Default file extension
-            dlg.Filter = "All files (.*)|*.*"; // Filter files by extension 
+            Microsoft.Win32.OpenFileDialog uploadFile_dialogBox = new Microsoft.Win32.OpenFileDialog();
+            uploadFile_dialogBox.FileName = ""; // Default file name
+            uploadFile_dialogBox.Title = "One Drive - Upload File";
+            uploadFile_dialogBox.DefaultExt = ".*"; // Default file extension
+            uploadFile_dialogBox.Filter = "All files (.*)|*.*"; // Filter files by extension 
             
             // Show open file dialog box
-            Nullable<bool> result = dlg.ShowDialog();
+            Nullable<bool> result = uploadFile_dialogBox.ShowDialog();
 
             // Process open file dialog box results 
             if (result == true)
             {
-                System.IO.FileInfo fileInfo = new System.IO.FileInfo(dlg.FileName);
-                fileTransfer.UploadFile(fileInfo.DirectoryName,fileInfo.Name);
+                System.IO.FileInfo fileInfo = new System.IO.FileInfo(uploadFile_dialogBox.FileName);
+                fileTransfer.UploadFile(fileInfo.DirectoryName, fileInfo.Name);
             }
             RefreshContent();
-            
         }
 
         private void downloadButton_Click(object sender, RoutedEventArgs e)
         {
-            string fileName = ((FileData)fileList.SelectedItem).Name;
-            Microsoft.Win32.SaveFileDialog savefile = new Microsoft.Win32.SaveFileDialog();
-            savefile.FileName = Name;
-            savefile.Filter = "All files (.*)|*.*";
-
-            Nullable<bool> result = savefile.ShowDialog();
-
-            if(result == true)
+            try
             {
-                System.IO.FileInfo fileInfo = new System.IO.FileInfo(savefile.FileName);
-                fileTransfer.DownloadFile(fileInfo.DirectoryName, fileName);
+                string fileName = ((FileData)fileList.SelectedItem).Name;
+                Microsoft.Win32.SaveFileDialog downloadFile_dialogBox = new Microsoft.Win32.SaveFileDialog();
+                downloadFile_dialogBox.Title = "One Drive - Download File";
+                downloadFile_dialogBox.FileName = fileName;
+                downloadFile_dialogBox.Filter = "All files (.*)|*.*";
+
+                Nullable<bool> result = downloadFile_dialogBox.ShowDialog();
+
+                if (result == true)
+                {
+                    System.IO.FileInfo fileInfo = new System.IO.FileInfo(downloadFile_dialogBox.FileName);
+                    fileTransfer.DownloadFile(fileInfo.DirectoryName, fileName, downloadFile_dialogBox.FileName);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Select an item to download.","One Drive - Error",MessageBoxButton.OK,MessageBoxImage.Error);
             }
         }
     }

@@ -11,6 +11,8 @@ namespace Salesiana.Cloud.ServiceManager.TransferServiceModel
 {
     public class FileTransfer : ITransferFile
     {
+        public FileInformation[] Files { get{return TransferService.Files();} }
+        
         public FileTransfer()
         {
             TransferService = new TransferServiceClient();
@@ -80,6 +82,16 @@ namespace Salesiana.Cloud.ServiceManager.TransferServiceModel
         public DirectoryInfo CloudInformation()
         {
             return TransferService.FolderInformation();
+        }
+
+        public List<FileData> CloudFiles()
+        {
+            List<FileData> fileList = new List<FileData>();
+            foreach (FileInformation item in TransferService.Files())
+            {
+                fileList.Add(new FileData() { Name = item.Name, Size = item.Size / (float)1048576, LastUpdate = item.LastModified });                                                
+            }
+            return fileList;
         }
     }
 }

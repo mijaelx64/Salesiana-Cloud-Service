@@ -9,7 +9,86 @@
 //------------------------------------------------------------------------------
 
 namespace Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FileInformation", Namespace="http://schemas.datacontract.org/2004/07/Salesiana.Cloud.Service")]
+    [System.SerializableAttribute()]
+    public partial class FileInformation : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastModifiedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long SizeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LastModified {
+            get {
+                return this.LastModifiedField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastModifiedField, value) != true)) {
+                    this.LastModifiedField = value;
+                    this.RaisePropertyChanged("LastModified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long Size {
+            get {
+                return this.SizeField;
+            }
+            set {
+                if ((this.SizeField.Equals(value) != true)) {
+                    this.SizeField = value;
+                    this.RaisePropertyChanged("Size");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SalesianaCloudTransferService.ITransferService")]
@@ -34,6 +113,12 @@ namespace Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransferService/FolderInformation", ReplyAction="http://tempuri.org/ITransferService/FolderInformationResponse")]
         System.Threading.Tasks.Task<System.IO.DirectoryInfo> FolderInformationAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransferService/Files", ReplyAction="http://tempuri.org/ITransferService/FilesResponse")]
+        Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.FileInformation[] Files();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransferService/Files", ReplyAction="http://tempuri.org/ITransferService/FilesResponse")]
+        System.Threading.Tasks.Task<Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.FileInformation[]> FilesAsync();
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -172,6 +257,14 @@ namespace Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService {
         
         public System.Threading.Tasks.Task<System.IO.DirectoryInfo> FolderInformationAsync() {
             return base.Channel.FolderInformationAsync();
+        }
+        
+        public Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.FileInformation[] Files() {
+            return base.Channel.Files();
+        }
+        
+        public System.Threading.Tasks.Task<Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.FileInformation[]> FilesAsync() {
+            return base.Channel.FilesAsync();
         }
     }
 }

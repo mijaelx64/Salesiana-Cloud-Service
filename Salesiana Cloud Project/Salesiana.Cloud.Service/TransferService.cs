@@ -10,6 +10,13 @@ namespace Salesiana.Cloud.Service
 {
     class TransferService : ITransferService
     {
+        public DirectoryInfo Repository { get; set; }
+
+        public TransferService()
+        {
+            Repository = new DirectoryInfo(@"c:\SalesianaCloud\");
+        }
+
         public RemoteFileInfo DownloadFile(DownloadRequest request)
         {
             RemoteFileInfo result = new RemoteFileInfo();
@@ -31,9 +38,9 @@ namespace Salesiana.Cloud.Service
                 result.Length = fileInfo.Length;
                 result.FileByteStream = stream;
             }
-            catch (Exception ex)
+            catch (IOException ex)
             {
-
+                Console.WriteLine(ex.Message);
             }
             return result; 
         }
@@ -66,7 +73,19 @@ namespace Salesiana.Cloud.Service
 
         public DirectoryInfo FolderInformation()
         {
-            return new DirectoryInfo(@"c:\SalesianaCloud\");
+            return Repository;
+        }
+
+        public List<FileInformation> Files()
+        {
+            //DirectoryInfo dir = fileTransfer.CloudInformation();
+            FileInfo[] Files = Repository.GetFiles("*.*"); //Getting Text files
+            List<FileInformation> files = new List<FileInformation>();
+            foreach (FileInfo file in Files)
+            {
+                files.Add(new FileInformation() { Name = file.Name, Size = file.Length, LastModified = file.LastWriteTime.ToString() });
+            }
+            return files;
         }
     }
 }

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Salesiana.Cloud.ServiceManager.TransferServiceModel;
+using Salesiana.Cloud.Common.Model;
 using System.IO;
 
 namespace Salesiana.Cloud.ClientUI
@@ -37,14 +38,7 @@ namespace Salesiana.Cloud.ClientUI
 
         public void RefreshContent() 
         {
-            DirectoryInfo dir = fileTransfer.CloudInformation();
-            FileInfo[] Files = dir.GetFiles("*.*"); //Getting Text files
-            List<FileDescription> files = new List<FileDescription>();
-            foreach (FileInfo file in Files)
-            {
-                files.Add(new FileDescription() { Name = file.Name, Size = file.Length / (float)1048576, Modified = file.LastWriteTime.ToString() });
-            }
-            fileList.ItemsSource = files;
+            fileList.ItemsSource = fileTransfer.CloudFiles();
         }
 
         private void uploadButton_Click(object sender, RoutedEventArgs e)
@@ -62,9 +56,6 @@ namespace Salesiana.Cloud.ClientUI
             {
                 System.IO.FileInfo fileInfo = new System.IO.FileInfo(dlg.FileName);
                 fileTransfer.UploadFile(fileInfo.DirectoryName,fileInfo.Name);
-                // Open document 
-                //this.uploadPathTextBox.Text = dlg.FileName;
-                
             }
             RefreshContent();
             
@@ -72,7 +63,7 @@ namespace Salesiana.Cloud.ClientUI
 
         private void downloadButton_Click(object sender, RoutedEventArgs e)
         {
-            string fileName = ((FileDescription)fileList.SelectedItem).Name;
+            string fileName = ((FileData)fileList.SelectedItem).Name;
             Microsoft.Win32.SaveFileDialog savefile = new Microsoft.Win32.SaveFileDialog();
             savefile.FileName = Name;
             savefile.Filter = "All files (.*)|*.*";
@@ -85,14 +76,5 @@ namespace Salesiana.Cloud.ClientUI
                 fileTransfer.DownloadFile(fileInfo.DirectoryName, fileName);
             }
         }
-    }
-
-    public class FileDescription
-    {
-        public string Name { get; set; }
-
-        public float Size { get; set; }
-
-        public string Modified { get; set; }
     }
 }

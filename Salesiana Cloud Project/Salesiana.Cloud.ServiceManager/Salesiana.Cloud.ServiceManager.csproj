@@ -59,6 +59,12 @@
     <None Include="Service References\SalesianaCloudTransferService\Message.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\SalesianaCloudTransferService\Salesiana.Cloud.Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SalesianaCloudTransferService\Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.FileInformation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\SalesianaCloudTransferService\Salesiana.Cloud.ServiceManager.SalesianaCloudTransferService.RemoteFileInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

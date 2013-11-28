@@ -19,6 +19,9 @@ namespace Salesiana.Cloud.Service
 
         [OperationContract]
         DirectoryInfo FolderInformation();
+
+        [OperationContract]
+        List<FileInformation> Files();
     }
 
     
@@ -49,5 +52,18 @@ namespace Salesiana.Cloud.Service
                 FileByteStream = null;
             }
         }
+    }
+
+    [MessageContract]
+    public class FileInformation
+    {
+        [MessageBodyMember]
+        public string Name;
+        
+        [MessageBodyMember]
+        public long Size;
+        
+        [MessageBodyMember]
+        public string LastModified;
     }
 }

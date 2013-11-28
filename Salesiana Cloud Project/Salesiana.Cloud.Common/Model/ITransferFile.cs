@@ -21,6 +21,6 @@ namespace Salesiana.Cloud.Common.Model
         /// <param name="path"></param>
         void DownloadFile(string path, string fileName);
 
-        DirectoryInfo CloudInformation();
+        List<FileData> CloudFiles();
     }
 }

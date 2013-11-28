@@ -6,6 +6,7 @@
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import namespace="http://schemas.microsoft.com/Message" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Salesiana.Cloud.Service" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="DownloadRequest">
@@ -25,6 +26,12 @@
   <wsdl:message name="ITransferService_FolderInformation_OutputMessage">
     <wsdl:part name="parameters" element="tns:FolderInformationResponse" />
   </wsdl:message>
+  <wsdl:message name="ITransferService_Files_InputMessage">
+    <wsdl:part name="parameters" element="tns:Files" />
+  </wsdl:message>
+  <wsdl:message name="ITransferService_Files_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FilesResponse" />
+  </wsdl:message>
   <wsdl:portType name="ITransferService">
     <wsdl:operation name="DownloadFile">
       <wsdl:input wsaw:Action="http://tempuri.org/ITransferService/DownloadFile" name="DownloadRequest" message="tns:DownloadRequest" />
@@ -37,6 +44,10 @@
     <wsdl:operation name="FolderInformation">
       <wsdl:input wsaw:Action="http://tempuri.org/ITransferService/FolderInformation" message="tns:ITransferService_FolderInformation_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITransferService/FolderInformationResponse" message="tns:ITransferService_FolderInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Files">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITransferService/Files" message="tns:ITransferService_Files_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITransferService/FilesResponse" message="tns:ITransferService_Files_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITransferService" type="tns:ITransferService">
@@ -65,6 +76,15 @@
     </wsdl:operation>
     <wsdl:operation name="FolderInformation">
       <soap:operation soapAction="http://tempuri.org/ITransferService/FolderInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Files">
+      <soap:operation soapAction="http://tempuri.org/ITransferService/Files" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
